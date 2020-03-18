@@ -20,6 +20,9 @@
             </tr>
           </thead>
         </table>
-        <div class="detail" *ngIf="selected">
+        <div *ngIf="selected">
+    <app-product-detail [data]="selected"></app-product-detail>
+  </div>
+        <!-- <div class="detail" *ngIf="selected">
   {{selected.name}}
-</div>
+</div> -->
