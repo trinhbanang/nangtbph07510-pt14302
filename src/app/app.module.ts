@@ -10,10 +10,16 @@ import { ProductComponent } from './product/product.component';
 import { SlideComponent } from './slide/slide.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductService } from './services/product.service';
+import { AddProductComponent } from './add-product/add-product.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductListComponent, ProductComponent, SlideComponent, ProductManagerComponent, ProductDetailComponent ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductListComponent, ProductComponent, SlideComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [ProductService]
 })
 export class AppModule { }
