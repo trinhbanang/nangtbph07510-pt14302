@@ -5,7 +5,7 @@ export const data : Product[] = [
         name: "Item 1",
         price: 25.99,
         desc: "Nội dung mô tả sản phẩm",
-        img: 'http://placehold.it/700x400',
+        img: 'https://placehold.it/700x400',
         status: true
     },
     {
@@ -13,7 +13,7 @@ export const data : Product[] = [
         name: "Item 2",
         price: 25.99,
         desc: "Nội dung mô tả sản phẩm",
-        img: 'http://placehold.it/700x400',
+        img: 'https://placehold.it/700x400',
         status: true
     },
     {
@@ -21,7 +21,7 @@ export const data : Product[] = [
         name: "Item 3",
         price: 25.99,
         desc: "Nội dung mô tả sản phẩm",
-        img: 'http://placehold.it/700x400',
+        img: 'https://placehold.it/700x400',
         status: true
     }
 ]
