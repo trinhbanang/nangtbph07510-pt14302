@@ -2,16 +2,17 @@
     <!-- <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
     <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
     <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product> -->
-    <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+    <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let product of products; index as i">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" alt=""></a>
+        <a href="#"><img class="card-img-top" alt="" img src="{{product.img}}"></a>
         <div class="card-body">
             <h4 class="card-title">
             <a href="#">{{product.name}}</a>
             </h4>
             <h5>${{product.price}}</h5>
             <p class="card-text">{{product.desc}}</p>
-            <button (click)="showDetail(product)">Chi tiết</button>
+            <p>Tình trạng: {{ product.status ? 'Còn hàng' : 'Hết hàng'}}</p>
+            <button routerLink="/product/detail/{{product.id}}">Chi tiết</button>
             <button (click)="removeItem(product.id)">Xóa</button>
         </div>
         </div>
