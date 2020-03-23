@@ -7,39 +7,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" routerLink="/home">Home
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="about">About</a>
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-3">
-        <app-category></app-category>
-      </div>
-      <div class="col-lg-9">
-        <router-outlet></router-outlet>
-        <!-- <app-slide></app-slide>
-        <app-product-manager></app-product-manager>
-        <app-product-list></app-product-list>
-        <app-add-product></app-add-product> -->
-        
-      </div>
-    </div>
+  <div class="container"> 
+    <router-outlet></router-outlet>
   </div>
   <footer class="py-5 bg-dark">
     <div class="container">

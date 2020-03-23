@@ -6,6 +6,17 @@ import { Product } from '../Product';
 export class ProductService {
  products = data;
   constructor() { }
+  
+    getProducts(){
+      console.log('Hello');
+      return this.products;
+  }
+  getProduct(id){
+    return this.products.find(product => product.id == id);
+  }
+    removeProduct(id){
+    return this.products = this.products.filter(product => product.id != id)
+  }
   addProduct(product){
 
     console.log(product);

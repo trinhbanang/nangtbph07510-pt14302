@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../Product';
-import { data } from '../Mock-data';
+import { ProductService } from '../services/product.service'
 @Component({
   selector: 'app-product-manager',
   templateUrl: './product-manager.component.html',
@@ -8,17 +8,19 @@ import { data } from '../Mock-data';
 })
 export class ProductManagerComponent implements OnInit {
 
-  constructor() { }
+  products: Product[];
+  constructor(
+    private productService: ProductService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
   }
-    products = data;
-  selected: Product;
-  showDetail(product){
-    this.selected = product;
-  }
+
+
   removeItem(id){
-    return this.products = this.products.filter(product => product.id != id);
+    this.products = this.productService.removeProduct(id);
+    // this.products = this.products.filter(product => product.id != id)
   }
 
 }
