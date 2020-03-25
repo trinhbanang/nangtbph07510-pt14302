@@ -8,7 +8,8 @@ import { ContactComponent } from "./contact/contact.component";
 import { ServicesComponent } from "./services/services.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductManagerComponent } from "./product-manager/product-manager.component";
-import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductDetailComponent } from "./product-detail/product-detail.component";import { from } from "rxjs";
+
 
 
 const routes: Routes = [

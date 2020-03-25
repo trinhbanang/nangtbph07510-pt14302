@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -20,7 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductListComponent, ProductComponent, SlideComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, NotFoundComponent, ContactComponent, ServicesComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
