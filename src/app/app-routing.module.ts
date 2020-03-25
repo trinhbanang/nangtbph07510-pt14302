@@ -9,6 +9,7 @@ import { ServicesComponent } from "./services/services.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductManagerComponent } from "./product-manager/product-manager.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";import { from } from "rxjs";
+import { ProductEditComponent } from "./product-edit/product-edit.component";
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "product/manager", component: ProductManagerComponent },
   { path: "product/add", component: AddProductComponent },
   { path: "product/detail/:id", component: ProductDetailComponent },
+  { path: "product/edit/:id", component: ProductEditComponent},
   { path: "about", component: AboutComponent },
   { path: "services", component: ServicesComponent },
   { path: "contact", component: ContactComponent },
